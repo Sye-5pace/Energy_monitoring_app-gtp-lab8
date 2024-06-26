@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -12,14 +13,50 @@
   </head>
   <body class="w-full min-h-screen box-border p-0 m-0 bg-whitelilac font-ubuntu">
     <div class="flex flex-col gap-6">
-      <header class="self-start border">
-        <h1 class="text-3xl font-bold font-ubuntu">
+      <header class="p-3 w-full flex border-b-[0.125rem] border-whisper shadow-md justify-between">
+        <h1 class="text-xl font-medium font-ubuntu">
           Hello there, User
         </h1>
+        <div class="flex gap-4 items-center">
+          <button class="text-[0.85rem] bg-tuatara p-2 py-1 rounded-[0.325rem] text-whitelilac hover:bg-honeysuckle hover:text-tuatara">manage devices</button>
+          <div class="size-[1.85rem] rounded-full bg-[#1b1b1a] flex items-center justify-center children:w-[1rem] children:h-[2rem]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-75  fill-honeysuckle absolute inline-flex animate-ping">
+            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-50  fill-honeysuckle absolute inline-flex animate-ping">
+            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="  fill-honeysuckle">
+            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+          </svg>
+          </div>
+        </div>
       </header>
-      <main class="border flex justify-center items-center flex-col">
-        <h1>Welcome to the Energy Monitoring Dashboard
-          <section class="bg-whisper w-[10rem] h-[7.25rem]"></section>
+      <main class="flex justify-center items-center flex-col p-3 gap-7">
+        <h1>Welcome to the Energy Monitoring Dashboard</h1>
+        <section class="flex gap-4 self-start children:p-2 children:w-[20rem] children:h-[14.25rem] children:rounded-[0.625rem] children:border-whisper children:bg-whisper children:shadow-md">
+          <section class="  ">
+            <p id="report-heading" class="" >Daily </p>
+            <div>
+              
+            </div>
+          </section>
+          <section class="  ">
+            <p id="report-heading" class="" >Weekly </p>
+            <div>
+              
+            </div>
+          </section>
+          <section class="  ">
+            <p id="report-heading" class="" >Monthly </p>
+            <div>
+              
+            </div>
+          </section>
+        </section>
+        <section class="w-full">
+
+        </section>
       </main>
     </div>
   </body>
