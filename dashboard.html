@@ -34,24 +34,15 @@
       </header>
       <main class="flex justify-center items-center flex-col p-3 gap-7">
         <h1>Welcome to the Energy Monitoring Dashboard</h1>
-        <section class="flex gap-4 children:p-2 children:w-[20rem] children:h-[14.25rem] children:rounded-[0.625rem] children:border-whisper children:bg-whisper children:shadow-md">
+        <section class="flex gap-4 children:p-2 children:w-[27rem] children:h-[16rem] children:rounded-[0.625rem] children:border-whisper children:bg-whisper children:shadow-md">
           <section class="  ">
-            <p id="report-heading" class="" >Daily </p>
-            <div>
-              
-            </div>
+            <canvas id="hourly-canvas" class="w-[26.75rem] h-[15.75rem]"></canvas>
           </section>
           <section class="  ">
-            <p id="report-heading" class="" >Weekly </p>
-            <div>
-              
-            </div>
+            <canvas id="weekly-canvas" class="w-[26.75rem] h-[15.75rem]"></canvas> 
           </section>
           <section class="  ">
-            <p id="report-heading" class="" >Monthly </p>
-            <div>
-              
-            </div>
+            <canvas id="monthly-canvas" class="w-[26.75rem] h-[15.75rem]"></canvas>
           </section>
         </section>
         <section class="w-full">
@@ -59,6 +50,10 @@
         </section>
       </main>
     </div>
-    <script type="module" src="./usage_data.js"></script>
+    <script type="module" src="./dashboard.js"></script>
+    <script type="module" src="./energy_charts/hourly_datapoints.js"></script>
+    <script type="module" src="./energy_charts/monthly_datapoints.js"></script>
+    <script type="module" src="./energy_charts/daily_datapoints.js"></script>
+    <!-- <script type="module" src="./usage_data.js"></script> -->
   </body>
 </html>

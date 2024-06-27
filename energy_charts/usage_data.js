@@ -2,7 +2,6 @@ const convertTimestamp = (timestamp) => {
   const date = new Date(timestamp * 1000);
   return date.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' });
 }
-  
 
 export const data = {
   "timestamp": convertTimestamp(1656237380),
@@ -250,6 +249,91 @@ export const data = {
           "time": convertTimestamp(1656218980),
           "power": 550,
           "energy_used": 0.55
+        },
+        {
+          "time": convertTimestamp(1656222580),
+          "power": 600,
+          "energy_used": 0.60
+        },
+        {
+          "time": convertTimestamp(1656226180),
+          "power": 480,
+          "energy_used": 0.48
+        },
+        {
+          "time": convertTimestamp(1656229780),
+          "power": 520,
+          "energy_used": 0.52
+        },
+        {
+          "time": convertTimestamp(1656233380),
+          "power": 570,
+          "energy_used": 0.57
+        },
+        {
+          "time": convertTimestamp(1656236980),
+          "power": 510,
+          "energy_used": 0.51
+        },
+        {
+          "time": convertTimestamp(1656240580),
+          "power": 620,
+          "energy_used": 0.62
+        },
+        {
+          "time": convertTimestamp(1656244180),
+          "power": 490,
+          "energy_used": 0.49
+        },
+        {
+          "time": convertTimestamp(1656247780),
+          "power": 540,
+          "energy_used": 0.54
+        },
+        {
+          "time": convertTimestamp(1656251380),
+          "power": 580,
+          "energy_used": 0.58
+        },
+        {
+          "time": convertTimestamp(1656254980),
+          "power": 500,
+          "energy_used": 0.50
+        },
+        {
+          "time": convertTimestamp(1656258580),
+          "power": 560,
+          "energy_used": 0.56
+        },
+        {
+          "time": convertTimestamp(1656262180),
+          "power": 530,
+          "energy_used": 0.53
+        },
+        {
+          "time": convertTimestamp(1656265780),
+          "power": 590,
+          "energy_used": 0.59
+        },
+        {
+          "time": convertTimestamp(1656269380),
+          "power": 470,
+          "energy_used": 0.47
+        },
+        {
+          "time": convertTimestamp(1656272980),
+          "power": 550,
+          "energy_used": 0.55
+        },
+        {
+          "time": convertTimestamp(1656276580),
+          "power": 610,
+          "energy_used": 0.61
+        },
+        {
+          "time": convertTimestamp(1656280180),
+          "power": 480,
+          "energy_used": 0.48
         }
       ],
       "daily": [
@@ -259,7 +343,7 @@ export const data = {
         },
         {
           "date": convertTimestamp(1656028800),
-          "energy_used": 16.6
+          "energy_used": 10.6
         },
         {
           "date": convertTimestamp(1656115200),
@@ -267,17 +351,25 @@ export const data = {
         },
         {
           "date": convertTimestamp(1656201600),
-          "energy_used": 15.2
+          "energy_used": 1.2
         },
         {
           "date": convertTimestamp(1656288000),
           "energy_used": 12.9
+        },
+        {
+          "date": convertTimestamp(1656187000),
+          "energy_used": 6.9
+        },
+        {
+          "date": convertTimestamp(1656186100),
+          "energy_used": 5
         }
       ],
       "monthly": [
         {
           "month": convertTimestamp(202405),
-          "energy_used": 270
+          "energy_used": 5
         },
         {
           "month": convertTimestamp(202404),
@@ -294,6 +386,34 @@ export const data = {
         {
           "month": convertTimestamp(202401),
           "energy_used": 280
+        },
+        {
+          "month": convertTimestamp(202405),
+          "energy_used": 70
+        },
+        {
+          "month": convertTimestamp(202404),
+          "energy_used": 218
+        },
+        {
+          "month": convertTimestamp(202403),
+          "energy_used": 160
+        },
+        {
+          "month": convertTimestamp(202402),
+          "energy_used": 135
+        },
+        {
+          "month": convertTimestamp(202401),
+          "energy_used": 208
+        },
+        {
+          "month": convertTimestamp(202401),
+          "energy_used": 35
+        },
+        {
+          "month": convertTimestamp(202401),
+          "energy_used": 8
         }
       ]
     }
@@ -317,5 +437,27 @@ export const data = {
     }
   ]
 };
+
+export const weeklyEnergyPoints = []
+export const monthlyEnergyPoints = []
+export const hourlyEnergyPoints = []
+
+const weeklyInfo = data.totals['timeline'].daily
+for( const item of weeklyInfo){
+  weeklyEnergyPoints.push(item.energy_used)
+}
+
+const monthlyInfo = data.totals['timeline'].monthly
+for( const item of monthlyInfo){
+  monthlyEnergyPoints.push(item.energy_used)
+}
+
+const hourlyInfo = data.totals['timeline'].hourly
+for( const item of hourlyInfo){
+  hourlyEnergyPoints.push(item.energy_used)
+}
+
+console.log(data.totals.current)
+
 
 
