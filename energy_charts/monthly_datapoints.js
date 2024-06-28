@@ -2,7 +2,7 @@ import { Chart, LineController,LineElement, PointElement,LinearScale,Title, Cate
 import { monthlyEnergyPoints } from './usage_data'
 import { animationOptions } from './weekly_datapoints'
 
-const monthlyCanvas = document.getElementById('monthly-canvas');
+const monthlyCanvas = document.getElementById('monthly-chart');
 
 const labels = [
     "JAN", "FEB", "MAR", 

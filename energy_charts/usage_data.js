@@ -425,7 +425,28 @@ export const data = {
       "device_id": "device_1",
       "message": "Living Room power consumption exceeding 130W for 30 minutes",
       "timestamp": convertTimestamp(1656234560)
-    }
+    },
+    {
+      "id": "alert_2",
+      "type": "low_battery",
+      "device_id": "device_2",
+      "message": "Thermostat battery level is below 20%",
+      "timestamp": convertTimestamp(1656238160)
+    },
+    {
+      "id": "alert_3",
+      "type": "offline",
+      "device_id": "device_3",
+      "message": "Garage door sensor is offline",
+      "timestamp": convertTimestamp(1656241760)
+    },
+    {
+      "id": "alert_4",
+      "type": "high_usage",
+      "device_id": "device_4",
+      "message": "Kitchen appliance power consumption exceeding 500W for 15 minutes",
+      "timestamp": convertTimestamp(1656245360)
+    },
   ],
   "goals": [
     {
@@ -434,7 +455,28 @@ export const data = {
       "target": 45,
       "progress": 0.8,
       "start_date": convertTimestamp(1654636800)
-    }
+    },
+    {
+      "id": "goal_2",
+      "name": "Increase solar energy generation by 20%",
+      "target": 75,
+      "progress": 0.6,
+      "start_date": convertTimestamp(1654723200)
+    },
+    {
+      "id": "goal_3",
+      "name": "Reduce water consumption by 15% in the next quarter",
+      "target": 35,
+      "progress": 0.4,
+      "start_date": convertTimestamp(1654809600)
+    },
+    {
+      "id": "goal_4",
+      "name": "Improve home insulation to reduce heating costs by 12%",
+      "target": 55,
+      "progress": 0.7,
+      "start_date": convertTimestamp(1654896000)
+    },
   ]
 };
 
@@ -457,7 +499,25 @@ for( const item of hourlyInfo){
   hourlyEnergyPoints.push(item.energy_used)
 }
 
-console.log(data.totals.current)
+
+
+// console.log(data.totals.current)
+const alerts = data.alerts
+const goals = data.goals
+
+
+export const alertsInfo = alerts.map(alert => ({
+  type: alert.type,
+  device_id: alert.device_id,
+  message: alert.message,
+}));
+
+export const goalsInfo = goals.map(goal => ({
+  name: goal.name,
+  target: goal.target,
+  progress: goal.progress, // Add this line
+}))
+
 
 
 

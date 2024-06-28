@@ -5,16 +5,32 @@ export default {
   theme: {
     fontFamily: {
       'glitch':['Rubik Glitch','system-ui'],
-      'ubuntu': ['Ubuntu','sans-serif']
+      'ubuntu': ['Ubuntu','sans-serif'],
+      'concert': ['Concert one','sans-serif'],
+    },
+    screens: {
+      'mobile': {'min':'200px','max':'427px'},
+      'tablet': {'min':'427px','max':'782px'},
+      'laptop': {'min':'782.1px'}
     },
     colors:{
-      'tuatara':'#1b1b1a',
       'whitelilac':'#fbfafd',
+      'tuatara':'#1b1b1a',
       'honeysuckle':'#ECFB7A',
       'whisper':'#F5F6FA',
-      'snuff':'#E0E1F0'
+      // 'snuff':'#E0E1F0'
     },
-    extend: {},
+    extend: {
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        }
+      }
+    },
   },
   plugins: [
     plugin(function({addVariant}){

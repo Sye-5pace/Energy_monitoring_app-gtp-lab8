@@ -10,7 +10,7 @@ export const animationOptions = {
 
 
 
-const weeklyCanvas = document.getElementById('weekly-canvas')
+const weeklyCanvas = document.getElementById('weekly-chart')
 
 const labels = [
     'SUN','MON',

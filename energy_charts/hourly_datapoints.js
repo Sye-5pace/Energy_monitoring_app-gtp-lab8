@@ -2,7 +2,7 @@ import { Chart, LineController,LineElement, PointElement,LinearScale,Title, Cate
 import { hourlyEnergyPoints } from './usage_data'
 import { animationOptions } from './weekly_datapoints'
 
-const hourlyCanvas = document.getElementById('hourly-canvas')
+const hourlyCanvas = document.getElementById('hourly-chart')
 
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
