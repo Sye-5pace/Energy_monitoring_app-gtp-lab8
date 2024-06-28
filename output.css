@@ -594,6 +594,21 @@ video {
   height: 28rem;
 }
 
+.size-\[\.5rem\] {
+  width: .5rem;
+  height: .5rem;
+}
+
+.size-\[2rem\] {
+  width: 2rem;
+  height: 2rem;
+}
+
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-\[15\.75rem\] {
   height: 15.75rem;
 }
@@ -774,6 +789,11 @@ video {
 .text-honeysuckle {
   --tw-text-opacity: 1;
   color: rgb(236 251 122 / var(--tw-text-opacity));
+}
+
+.text-tuatara {
+  --tw-text-opacity: 1;
+  color: rgb(27 27 26 / var(--tw-text-opacity));
 }
 
 .opacity-50 {
