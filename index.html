@@ -7,38 +7,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./sass.scss">
     <link rel="stylesheet" href="./output.css">
     <title>Energy Monitor</title>
   </head>
   <body class="w-full min-h-screen box-border p-0 m-0 bg-whitelilac flex justify-center items-center">
     <div class="w-full flex justify-center items-center flex-col">
-      <section class="welcome-content flex flex-col items-center" id="welcome-content">
-        <div class="size-[6.5rem] rounded-full bg-[#1b1b1a] flex items-center justify-center ">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-75 w-[3.5rem] h-[4.25rem] fill-honeysuckle absolute inline-flex animate-ping">
-            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-50 w-[3.5rem] h-[4.25rem] fill-honeysuckle absolute inline-flex animate-ping">
-            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" w-[3.5rem] h-[4.25rem] fill-honeysuckle">
-            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <figcaption class="text-xl font-medium font-glitch">
-          Energy Monitor
-        </figcaption>
+      <section class="rounded-lg shadow-md p-4 size-[28rem] bg-whisper">
+        <section class="welcome-content flex gap-2 items-center" id="welcome-content">
+          <div class="size-[1.85rem] rounded-full bg-[#1b1b1a] flex items-center justify-center children:w-[1rem] children:h-[2rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-75  fill-honeysuckle absolute inline-flex animate-wiggle">
+              <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-50  fill-honeysuckle absolute inline-flex animate-ping">
+              <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="  fill-honeysuckle">
+              <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <figcaption class="text-lg font-medium font-glitch">
+            <a href="./dashboard.html">
+              Energy Monitor
+            </a>
+          </figcaption>
+        </section>
+        <section>
+
+        </section>
       </section>
-      <!-- <section id="user-login" class="bg-whisper rounded-[0.375rem] p-4">
-        <h1 class="text-xl font-bold ">
-          User login
-        </h1>
-        <div>
-          
-          <input title="text" placeholder="username..." class="focus:outline-none"/>
-          <input title="text" placeholder="username..." class="focus:outline-none"/>
-        </div>
-      </section> -->
     </div>
     <script type="module" src="./main.js"></script>
   </body>

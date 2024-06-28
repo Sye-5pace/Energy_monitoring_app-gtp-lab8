@@ -70,7 +70,7 @@ const config = {
     },
     scales: {
       xAxes: [{
-        stacked: false, // Disable stacking for separate lines
+        stacked: false, 
       }],
     },
   },

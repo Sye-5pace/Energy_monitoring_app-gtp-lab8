@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginCard = document.getElementById('user-login')
   
     //redirects to Dashboard
-    const redirectLoadingScreen = (delay, targetPage) => {
-      setTimeout(() => {
-        window.location.href = targetPage;
-      }, delay);
-    };
+    // const redirectLoadingScreen = (delay, targetPage) => {
+    //   setTimeout(() => {
+    //     window.location.href = targetPage;
+    //   }, delay);
+    // };
   
-    redirectLoadingScreen(5000, './dashboard.html');
+    // redirectLoadingScreen(5000, './dashboard.html');
   });
