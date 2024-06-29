@@ -435,9 +435,6 @@ for( const item of hourlyInfo){
   hourlyEnergyPoints.push(item.energy_used)
 }
 
-
-
-
 export const alerts = data.alerts
 export const goals = data.goals
 
