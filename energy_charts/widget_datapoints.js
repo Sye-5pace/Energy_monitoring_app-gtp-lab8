@@ -1,81 +1,120 @@
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
+import { weeklyEnergyPoints, monthlyEnergyPoints, hourlyEnergyPoints } from './usage_data'
 
-// Import data from separate files (optional)
-// import { hourlyEnergyPoints, weeklyEnergyPoints, monthlyEnergyPoints } from './usage_data';
+const weeklyLabels = [
+  'SUN','MON',
+  'TUE','WED',
+  'THUR','FRI','SAT'
+]
 
-const combinedCanvas = document.getElementById('combined-chart');
 
-// Combine data into a single object
-const combinedData = {
-  labels: [], // Define labels array later
-  datasets: [
-    {
-      label: 'Hourly Energy Used',
-      data: /* Replace with your hourly data */, // Access data from separate file or directly
-      borderColor: 'rgb(180, 50, 100)',
-      pointBackgroundColor: 'rgba(0, 178, 131, 0.5)',
-      pointBorderColor: 'rgba(0, 178, 131, 1)',
-      borderWidth: 2,
-      tension: 0.5,
-    },
-    {
-      label: 'Weekly Energy Used',
-      data: /* Replace with your weekly data */, // Access data from separate file or directly
-      borderColor: 'rgb(75, 192, 192)',
-      pointBackgroundColor: 'rgba(255, 165, 0, 0.5)',
-      pointBorderColor: 'rgba(255, 165, 0, 1)',
-      borderWidth: 2,
-      tension: 0.5,
-    },
-    {
-      label: 'Monthly Energy Used',
-      data: /* Replace with your monthly data */, // Access data from separate file or directly
-      borderColor: 'rgb(80,250,100)',
-      borderWidth: 2,
-      tension: 0.5,
-    },
-  ],
-};
 
-// Define labels based on data type (hourly, weekly, monthly)
-const defineLabels = (dataType) => {
-  // Implement logic to generate labels based on data type (e.g., hourly = hours, weekly = weekdays, monthly = months)
-  // This logic will depend on the format of your data
-  return [...Array(dataType.data.length).keys()]; // Placeholder for sample labels
-};
+const hourlyLabels = [];
+for (let hour = 0; hour < 24; hour++) {
+  const formattedHour = hour.toString().padStart(2, '0'); 
+  hourlyLabels.push(`${formattedHour}:00`);
+}
 
-// Update labels based on data length
-combinedData.labels = defineLabels(combinedData.datasets[0]); // Assuming all datasets have same length
+const monthlyLabels = [
+  "JAN", "FEB", "MAR", 
+  "APR", "MAY", "JUN", "JUL", 
+  "AUG", "SEP", "OCT", 
+  "NOV", "DEC"
+];
 
-const animationOptions = {
-  easing: 'easeInOutExpo',
-  duration: 1500,
-  delay: 500,
-};
-
-const config = {
-  type: 'line',
-  data: combinedData,
-  options: {
-    responsive: true,
-    animation: animationOptions,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Combined Energy Usage',
-      },
-    },
-    scales: {
-      xAxes: [{
-        stacked: false, 
-      }],
-    },
+const energyData = {
+  hourly: {
+    title:'Energy used hourly(kW)',
+    label: hourlyLabels,
+    data: hourlyEnergyPoints
   },
-};
+  weekly: {
+    title:'Energy used weekly(kW)',
+    label: weeklyLabels,
+    data: weeklyEnergyPoints
+  },
+  monthly: {
+    title:'Energy used monthly(kW)',
+    label: monthlyLabels,
+    data: monthlyEnergyPoints
+  }
+}
+
+let currentView = 'weekly';
 
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
-new Chart(combinedCanvas, config);
+const data= {
+  labels: energyData[currentView].label,
+  datasets: [
+    {
+      label: 'Energy Used',
+      data: energyData[currentView].data,
+      fill: false,
+      pointRadius: 5,
+      borderColor: 'rgb(75,192,192)',
+      pointBackgroundColor: 'rgba(255, 165, 0, 0.5)',
+      pointBorderColor: 'rgba(255, 165, 0, 1)',
+      borderWidth: 2,
+      tension: 0.5
+    }
+  ]
+}
+
+const config = {
+  type: 'line',
+  id: 'combinedChart',
+  data,
+  options:{
+      reponsive: true,
+      animation: {
+        easing: 'easeInOutExpo',
+        duration: 1500,
+        delay: 500,
+        tension: {
+            duration: 1000,
+            easing: 'linear',
+            from: 1,
+            to: 0,
+            loop: true
+        }
+      },
+      plugins: {
+          legend: {
+              position: 'top'
+          },
+          title: {
+              display: true,
+              text:'Energy used'
+          }
+      },
+      layout: {
+          padding: 20
+      }        
+  }
+}
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const  combinedCanvas = document.getElementById('combined-charts').getContext('2d')
+  const combinedChart = new Chart(combinedCanvas, config);
+
+  const updateChart = () =>{
+    config.data.labels = energyData[currentView].label;
+    config.data.datasets[0].data = energyData[currentView].data;
+    config.options.plugins.title.text =energyData[currentView].title
+    combinedChart.update();
+  }
+
+  const buttons = document.querySelectorAll('.time-selector button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      currentView = button.dataset.view;
+      updateChart()
+    });
+  });
+  updateChart();
+});

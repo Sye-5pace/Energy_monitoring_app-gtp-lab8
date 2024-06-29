@@ -6,20 +6,27 @@ export const animationOptions = {
     easing: 'easeInOutExpo',
     duration: 1500,
     delay: 500,
+    tension: {
+        duration: 1000,
+        easing: 'linear',
+        from: 1,
+        to: 0,
+        loop: true
+    }
 }
 
 
 
-const weeklyCanvas = document.getElementById('weekly-chart')
+const weeklyCanvas = document.getElementById('weekly-chart').getContext('2d')
 
-const labels = [
+export const weeklyLabels = [
     'SUN','MON',
     'TUE','WED',
     'THUR','FRI','SAT'
 ]
 
 const data = {
-    labels: labels,
+    labels: weeklyLabels,
     datasets: [{
         label: 'Weekly Energy used',
         data: weeklyEnergyPoints,
@@ -35,6 +42,7 @@ const data = {
 
 const config = {
     type: 'line',
+    id: 'weeklyChart',
     data,
     options:{
         reponsive: true,
@@ -48,7 +56,9 @@ const config = {
                 text:'Weekly Energy Used'
             }
         },
-        
+        layout: {
+            padding: 20
+        }        
     }
 }
 
@@ -57,5 +67,5 @@ Chart.register(LineController, LineElement, PointElement, LinearScale, Title, Ca
 export const weeklyChart = new Chart(
     weeklyCanvas,
     config
-)
+) 
 

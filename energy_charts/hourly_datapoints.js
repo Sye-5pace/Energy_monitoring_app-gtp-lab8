@@ -2,11 +2,11 @@ import { Chart, LineController,LineElement, PointElement,LinearScale,Title, Cate
 import { hourlyEnergyPoints } from './usage_data'
 import { animationOptions } from './weekly_datapoints'
 
-const hourlyCanvas = document.getElementById('hourly-chart')
+const hourlyCanvas = document.getElementById('hourly-chart').getContext('2d')
 
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
-const labels = [
+export const hourlyLabels = [
     "12:00 ",
     "1:00 ",
     "2:00 ",
@@ -34,7 +34,7 @@ const labels = [
 ]
 
 const data = {
-    labels: labels,
+    labels: hourlyLabels,
     datasets: [{
         label: 'Hourly energy used',
         data: hourlyEnergyPoints,
@@ -49,6 +49,7 @@ const data = {
 
 const config = {
     type: 'line',
+    id: 'hourlyChart',
     data,
     options:{
         reponsive: true,
@@ -62,6 +63,9 @@ const config = {
                 text:'Hourly Energy Used'
             }
         },
+        layout: {
+            padding: 20
+        } 
     }
 }
 

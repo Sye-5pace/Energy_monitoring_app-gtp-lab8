@@ -2,9 +2,9 @@ import { Chart, LineController,LineElement, PointElement,LinearScale,Title, Cate
 import { monthlyEnergyPoints } from './usage_data'
 import { animationOptions } from './weekly_datapoints'
 
-const monthlyCanvas = document.getElementById('monthly-chart');
+const monthlyCanvas = document.getElementById('monthly-chart').getContext('2d')
 
-const labels = [
+export const monthlyLabels = [
     "JAN", "FEB", "MAR", 
     "APR", "MAY", "JUN", "JUL", 
     "AUG", "SEP", "OCT", 
@@ -12,7 +12,7 @@ const labels = [
 ];
 
 const data = {
-    labels: labels,
+    labels: monthlyLabels,
     datasets: [{
         label: 'Monthly energy used',
         data: monthlyEnergyPoints,
@@ -25,6 +25,7 @@ const data = {
 
 const config = {
     type: 'line',
+    id:'monthlyChart',
     data,
     options:{
         reponsive: true,
@@ -38,12 +39,13 @@ const config = {
                 text:'Monthly Energy Used'
             }
         },
+        layout: {
+            padding: 20
+        } 
     }
 }
 
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
-export const monthlyChart = new Chart(
-    monthlyCanvas,
-    config
-)
+new Chart( monthlyCanvas, config)
+
