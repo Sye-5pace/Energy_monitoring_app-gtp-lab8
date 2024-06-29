@@ -722,6 +722,16 @@ video {
   height: 38rem;
 }
 
+.size-\[1\.rem\] {
+  width: 1.rem;
+  height: 1.rem;
+}
+
+.size-\[1\.8rem\] {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
 .h-\[15\.75rem\] {
   height: 15.75rem;
 }
@@ -1216,8 +1226,132 @@ video {
 }
 
 @media (min-width: 200px) and (max-width: 427px) {
+  .mobile\:block {
+    display: block;
+  }
+
+  .mobile\:flex {
+    display: flex;
+  }
+
+  .mobile\:hidden {
+    display: none;
+  }
+
+  .mobile\:h-\[\] {
+    height: ;
+  }
+
+  .mobile\:h-\[27rem\] {
+    height: 27rem;
+  }
+
+  .mobile\:h-\[2rem\] {
+    height: 2rem;
+  }
+
+  .mobile\:h-\[\`9rem\] {
+    height: `9rem;
+  }
+
+  .mobile\:h-\[19rem\] {
+    height: 19rem;
+  }
+
+  .mobile\:h-\[rem\] {
+    height: rem;
+  }
+
+  .mobile\:h-\[21rem\] {
+    height: 21rem;
+  }
+
+  .mobile\:h-\[22rem\] {
+    height: 22rem;
+  }
+
+  .mobile\:h-\[22\.5rem\] {
+    height: 22.5rem;
+  }
+
+  .mobile\:h-\[2\.5rem\] {
+    height: 2.5rem;
+  }
+
+  .mobile\:h-\[23\.5rem\] {
+    height: 23.5rem;
+  }
+
+  .mobile\:h-\[23\.75rem\] {
+    height: 23.75rem;
+  }
+
+  .mobile\:w-\[\] {
+    width: ;
+  }
+
+  .mobile\:w-\[3\] {
+    width: 3;
+  }
+
+  .mobile\:w-\[28rem\] {
+    width: 28rem;
+  }
+
+  .mobile\:w-\[8rem\] {
+    width: 8rem;
+  }
+
+  .mobile\:w-\[18rem\] {
+    width: 18rem;
+  }
+
+  .mobile\:w-\[rem\] {
+    width: rem;
+  }
+
+  .mobile\:w-\[2rem\] {
+    width: 2rem;
+  }
+
+  .mobile\:w-\[22\.5rem\] {
+    width: 22.5rem;
+  }
+
+  .mobile\:w-\[2\.5rem\] {
+    width: 2.5rem;
+  }
+
+  .mobile\:w-\[20\.5rem\] {
+    width: 20.5rem;
+  }
+
+  .mobile\:w-\[23\.5rem\] {
+    width: 23.5rem;
+  }
+
+  .mobile\:w-\[24\.5rem\] {
+    width: 24.5rem;
+  }
+
   .mobile\:flex-col {
     flex-direction: column;
+  }
+
+  .mobile\:items-start {
+    align-items: flex-start;
+  }
+
+  .mobile\:items-center {
+    align-items: center;
+  }
+
+  .mobile\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .mobile\:justify-between {
+    justify-content: space-between;
   }
 
   .mobile\:gap-8 {
@@ -1232,6 +1366,10 @@ video {
     gap: 0.5rem;
   }
 
+  .mobile\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .mobile\:p-1 {
     padding: 0.25rem;
   }
@@ -1242,6 +1380,11 @@ video {
 
   .mobile\:p-4 {
     padding: 1rem;
+  }
+
+  .mobile\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .mobile\:text-\[1\.125rem\] {
@@ -1266,6 +1409,10 @@ video {
 
   .mobile\:text-\[0\.\] {
     color: 0.;
+  }
+
+  .mobile\:text-\[1\.12\] {
+    color: 1.12;
   }
 
   .mobile\:children\:h-\[\]>* {
@@ -1310,5 +1457,37 @@ video {
 
   .mobile\:children\:w-\[20rem\]>* {
     width: 20rem;
+  }
+
+  .mobile\:children\:text-\[0\.675rem\]>* {
+    font-size: 0.675rem;
+  }
+
+  .mobile\:children\:text-\[\]>* {
+    color: ;
+  }
+
+  .mobile\:children\:text-\[0\.\]>* {
+    color: 0.;
+  }
+
+  .mobile\:children\:text-\[0\.6\]>* {
+    color: 0.6;
+  }
+
+  .mobile\:children\:text-\[0\.675\]>* {
+    color: 0.675;
+  }
+}
+
+@media (min-width: 427px) and (max-width: 782px) {
+  .tablet\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 782.1px) {
+  .laptop\:hidden {
+    display: none;
   }
 }
