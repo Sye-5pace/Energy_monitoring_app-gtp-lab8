@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="./output.css">
     <title>Energy Monitor</title>
   </head>
-  <body class="w-full min-h-screen box-border p-0 m-0 bg-whitelilac flex justify-center items-center">
-    <div class="w-full flex justify-center items-center mobile:justify-start flex-col mobile:gap-10">
+  <body class="w-full min-h-screen box-border p-0 m-0 bg-whitelilac flex justify-center items-center mobile:items-start">
+    <div class="w-full flex justify-center items-center  flex-col mobile:gap-[4.5rem] mobile:pt-[1.75rem]">
+      <!-- Mobile visibility -->
       <section class="w-full laptop:hidden tablet:hidden mobile:flex mobile:justify-between mobile:items-center mobile:px-2" >
         <div class= "flex gap-2" >
           <div class="size-[1.85rem] rounded-full bg-[#1b1b1a] flex items-center justify-center children:w-[1rem] children:h-[2rem]">
@@ -43,16 +44,17 @@
             <div class="size-3 border-whitelilac bg-tuatara rounded-full text-[#fff] flex items-center justify-center absolute left-[3.625rem] top-[0.025rem] shadow-2xl text-[0.5rem] font-semibold" id="mobile-goal-count"></div>
           </div>
         </div>
-        <a class="size-[1.85rem] rounded-full bg-honeysuckle flex justify-center items-center"  href="./dashboard.html">
+        <!-- <a class="size-[1.85rem] rounded-full bg-honeysuckle flex justify-center items-center"  href="./dashboard.html">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 stroke-tuatara">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
           </svg>
-        </a>
+        </a> -->
         
       </section>
-      <section class=" flex gap-14 mobile:gap-8 flex-col rounded-lg shadow-md p-4 w-[33rem] h-[29rem] mobile:w-[23.5rem] mobile:h-[23.75rem] bg-whisper">
-        <div class="welcome-content flex justify-between items-center mobile:hidden" id="welcome-content">
-          <div class= "flex gap-2" >
+
+      <section class=" flex gap-14 mobile:gap-1 flex-col rounded-lg shadow-md p-4 w-[33rem] h-[29rem] mobile:w-[23.5rem]  mobile:h-[18.75rem] bg-whisper">
+        <div class="welcome-content flex justify-between items-center " id="welcome-content">
+          <div class= "flex gap-2 mobile:hidden" >
             <div class="size-[1.85rem] rounded-full bg-[#1b1b1a] flex items-center justify-center children:w-[1rem] children:h-[2rem]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-75  fill-honeysuckle absolute inline-flex animate-wiggle">
                 <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
@@ -68,7 +70,7 @@
                 Energy Monitor              
             </figcaption>
           </div>
-          <div class="flex gap-4 relative ">
+          <div class="flex gap-4 relative  mobile:hidden">
             <div class="size-[1.5rem] rounded-full bg-honeysuckle flex justify-center items-center ">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 stroke-tuatara animate-wiggle">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
@@ -82,7 +84,7 @@
               <div class="size-3 border-whitelilac bg-tuatara rounded-full text-[#fff] flex items-center justify-center absolute left-[3.625rem] top-[0.025rem] shadow-2xl text-[0.5rem] font-semibold "  id="goal-count"></div>
             </div>
           </div>
-          <a class="size-[1.85rem] rounded-full bg-honeysuckle flex justify-center items-center"  href="./dashboard.html">
+          <a class="size-[1.85rem] rounded-full bg-honeysuckle flex justify-center items-center cursor-pointer mobile:ml-[19.25rem] "  href="./dashboard.html">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 stroke-tuatara">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
             </svg>

@@ -659,6 +659,10 @@ video {
   animation: wiggle 1s ease-in-out infinite;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -699,12 +703,24 @@ video {
   gap: 1.75rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-b-\[0\.125rem\] {
@@ -957,6 +973,42 @@ video {
 }
 
 @media (min-width: 200px) and (max-width: 427px) {
+  .mobile\:left-\[\] {
+    left: ;
+  }
+
+  .mobile\:left-\[8rem\] {
+    left: 8rem;
+  }
+
+  .mobile\:ml-\[8rem\] {
+    margin-left: 8rem;
+  }
+
+  .mobile\:ml-\[15rem\] {
+    margin-left: 15rem;
+  }
+
+  .mobile\:ml-\[1rem\] {
+    margin-left: 1rem;
+  }
+
+  .mobile\:ml-\[18rem\] {
+    margin-left: 18rem;
+  }
+
+  .mobile\:ml-\[20rem\] {
+    margin-left: 20rem;
+  }
+
+  .mobile\:ml-\[19rem\] {
+    margin-left: 19rem;
+  }
+
+  .mobile\:ml-\[19\.25rem\] {
+    margin-left: 19.25rem;
+  }
+
   .mobile\:flex {
     display: flex;
   }
@@ -969,12 +1021,32 @@ video {
     height: 23.75rem;
   }
 
+  .mobile\:h-\[21\.75rem\] {
+    height: 21.75rem;
+  }
+
+  .mobile\:h-\[19\.75rem\] {
+    height: 19.75rem;
+  }
+
+  .mobile\:h-\[17\.75rem\] {
+    height: 17.75rem;
+  }
+
+  .mobile\:h-\[18\.75rem\] {
+    height: 18.75rem;
+  }
+
   .mobile\:w-\[23\.5rem\] {
     width: 23.5rem;
   }
 
   .mobile\:flex-col {
     flex-direction: column;
+  }
+
+  .mobile\:items-start {
+    align-items: flex-start;
   }
 
   .mobile\:items-center {
@@ -1001,6 +1073,46 @@ video {
     gap: 2rem;
   }
 
+  .mobile\:gap-1 {
+    gap: 0.25rem;
+  }
+
+  .mobile\:gap-3 {
+    gap: 0.75rem;
+  }
+
+  .mobile\:gap-\[\] {
+    gap: ;
+  }
+
+  .mobile\:gap-\[6\.\] {
+    gap: 6.;
+  }
+
+  .mobile\:gap-\[6\.5rem\] {
+    gap: 6.5rem;
+  }
+
+  .mobile\:gap-\[4\.5rem\] {
+    gap: 4.5rem;
+  }
+
+  .mobile\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .mobile\:self-end {
+    align-self: flex-end;
+  }
+
+  .mobile\:justify-self-start {
+    justify-self: start;
+  }
+
+  .mobile\:border {
+    border-width: 1px;
+  }
+
   .mobile\:p-3 {
     padding: 0.75rem;
   }
@@ -1013,6 +1125,34 @@ video {
   .mobile\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .mobile\:pt-4 {
+    padding-top: 1rem;
+  }
+
+  .mobile\:pt-\[\] {
+    padding-top: ;
+  }
+
+  .mobile\:pt-\[3\.7\] {
+    padding-top: 3.7;
+  }
+
+  .mobile\:pt-\[3\.75r\] {
+    padding-top: 3.75r;
+  }
+
+  .mobile\:pt-\[3\.75rem\] {
+    padding-top: 3.75rem;
+  }
+
+  .mobile\:pt-\[2\.75rem\] {
+    padding-top: 2.75rem;
+  }
+
+  .mobile\:pt-\[1\.75rem\] {
+    padding-top: 1.75rem;
   }
 
   .mobile\:text-\[0\.875rem\] {
