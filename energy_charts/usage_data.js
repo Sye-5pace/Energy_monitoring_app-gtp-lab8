@@ -452,6 +452,21 @@ export const goalsInfo = goals.map(goal => ({
 }))
 
 
+// Function to calculate estimated cost based on hourly energy usage and electricity rate
+const calculateEnergyCost = (hourlyEnergyPoints, electricityRate) => {
+  const totalEnergyUsed = hourlyEnergyPoints.reduce((sum, energyUsed) => sum + energyUsed, 0);
+  const estimatedCost = totalEnergyUsed * electricityRate;
+  return estimatedCost;
+}
+
+// Extract hourly energy data and electricity rate from the provided data
+// const hourlyEnergyPoints = data.totals.timeline.hourly.map(hour => hour.energy_used);
+const electricityRate = data.user.electricity_rate;
+
+// Calculate the estimated cost of energy used
+const estimatedEnergyCost = calculateEnergyCost(hourlyEnergyPoints, electricityRate);
+
+console.log("Estimated cost of energy used:", estimatedEnergyCost);
 
 
 

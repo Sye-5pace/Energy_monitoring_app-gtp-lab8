@@ -6,6 +6,11 @@ const hourlyCanvas = document.getElementById('hourly-chart').getContext('2d')
 
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
+
+
+
+
+
 const hourlyLabels = [];
 for (let hour = 0; hour < 24; hour++) {
   const formattedHour = hour.toString().padStart(2, '0'); 
