@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         sub: resolve(__dirname, 'dashboard.html'),
+        sub: resolve(__dirname, 'appliance_view.html'),
       },
     },
   },
