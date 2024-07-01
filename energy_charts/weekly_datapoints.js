@@ -1,5 +1,5 @@
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
-import { weeklyEnergyPoints, } from './usage_data'
+import { weeklyEnergyPoints,estimatedWeeklyCost } from './usage_data'
 
 
 export const animationOptions = {
@@ -28,7 +28,7 @@ export const weeklyLabels = [
 const data = {
     labels: weeklyLabels,
     datasets: [{
-        label: 'Weekly Energy used',
+        label: `Hourly energy used $${estimatedWeeklyCost}`,
         data: weeklyEnergyPoints,
         fill: false,
         pointRadius: 5,

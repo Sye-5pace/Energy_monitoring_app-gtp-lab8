@@ -93,10 +93,13 @@
         </div>
         <div class="flex flex-col gap-2">
           <canvas id="combined-charts" width="300px" height="180px"></canvas>
-          <div class="time-selector children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper" >
-            <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara active:bg-honeysuckle active:text-tuatara">Hourly</button>
-            <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>
-            <button data-view="monthly" class="hover:bg-honeysuckle hover:text-tuatara">Monthly</button>
+          <div  class="flex justify-between">
+            <div class="time-selector children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper">
+              <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara ">Hourly</button>
+              <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>
+              <button data-view="monthly" class="hover:bg-honeysuckle hover:text-tuatara">Monthly</button>
+            </div>
+            <a class="hover:bg-honeysuckle hover:text-tuatara bg-tuatara text-whisper px-2 py-1 text-[0.875rem] mobile:text-[0.675rem] rounded-lg" href="./appliance_view.html">view devices</a>
           </div>
         </div>
       </section>

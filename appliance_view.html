@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+        <link href="./output.css" rel="stylesheet"/>
+        
+        <title>Appliances View</title>
+    </head>
+    <body class="w-full min-h-screen box-border p-0 m-0 bg-whitelilac font-ubuntu">
+      <div class="flex flex-col gap-6 items-center ">
+        <header class="p-4 w-full flex border-b-[0.125rem] border-whisper shadow-md justify-between">
+          <h1 class="text-[2rem] font-bold font-concert mobile:text-[1rem]">
+            Appliances
+          </h1>
+          
+          
+          <a href="./dashboard.html"  class="flex gap-2 items-center">
+            <h2 class="font-medium font-glitch text-lg text-[1rem]">DASHBOARD</h2>     
+            <div class="size-[1.85rem] rounded-full bg-[#1b1b1a] flex items-center justify-center children:w-[1rem] children:h-[2rem] " >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-75  fill-honeysuckle absolute inline-flex animate-wiggle">
+                <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="opacity-50  fill-honeysuckle absolute inline-flex animate-ping">
+                <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="  fill-honeysuckle">
+                <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+              </svg>
+            </div>       
+          </a>
+        </header>
+        <main id="device-grid" class="px-4 flex gap-8  w-full">
+          <div class="bg-whisper rounded-lg w-[28.5rem] h-[24.5rem] p-2" id="device-1">
+            <div class=" flex w-full justify-between">
+              <div id="device-1-info" ></div>
+              
+            </div>
+            <div >
+              <canvas id="device-1-chart" ></canvas>
+              <div class="time-selector-1 children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper">
+                <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara ">Hourly</button>
+                <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>
+                <button data-view="monthly" class="hover:bg-honeysuckle hover:text-tuatara">Monthly</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col gap-2 children:w-[25rem] children:h-[15rem] hidden">
+            <div class="shadow-lg rounded-lg bg-tuatara" id="device-2">2</div>
+            <div class="shadow-lg rounded-lg bg-whisper" id="device-3">3</div>
+          </div>
+          <div class="w-[28.5rem] h-[30.5rem] bg-tuatara shadow-lg rounded-lg hidden" id="device-4">
+            <div class=" flex w-full">
+              <div id="device-4-info"></div>
+              <div id="switch"  class="switch ml-[rem] w-[5.25rem] h-[12.75rem] bg-whisper rounded-r-[3.75rem] rounded-l-[3.75rem] flex justify-center items-start py-4">
+                <div id="knob" class="rounded-full size-[4rem] bg-whitelilac cursor-pointer shadow-lg "></div>
+              </div>
+            </div>
+            <div >
+              <canvas d="device-4-chart" ></canvas>
+              <div class="time-selector-4 children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper">
+                <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara ">Hourly</button>
+                <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>
+                <button data-view="monthly" class="hover:bg-honeysuckle hover:text-tuatara">Monthly</button>
+              </div>
+            </div>
+          </div>
+         
+        </main>
+      </div>
+      <script type="module" src="./appliance_helpers.js"></script>
+      <script type="module" src="./devices/device_1Info.js"></script>
+      <!-- <script type="module" src="./devices/device_4Info.js"></script> -->
+    </body>
+</html>

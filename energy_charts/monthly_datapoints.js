@@ -1,5 +1,5 @@
 import { Chart, LineController,LineElement, PointElement,LinearScale,Title, CategoryScale } from 'chart.js'
-import { monthlyEnergyPoints } from './usage_data'
+import { monthlyEnergyPoints,estimatedMonthlyCost } from './usage_data'
 import { animationOptions } from './weekly_datapoints'
 
 const monthlyCanvas = document.getElementById('monthly-chart').getContext('2d')
@@ -14,7 +14,7 @@ export const monthlyLabels = [
 const data = {
     labels: monthlyLabels,
     datasets: [{
-        label: 'Monthly energy used',
+        label:`Hourly energy used $ ${estimatedMonthlyCost}`,
         data: monthlyEnergyPoints,
         fill: false,
         borderColor: 'rgb(80,250,100)',

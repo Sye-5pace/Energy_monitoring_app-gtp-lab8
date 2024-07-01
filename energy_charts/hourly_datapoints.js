@@ -1,14 +1,10 @@
 import { Chart, LineController,LineElement, PointElement,LinearScale,Title, CategoryScale } from 'chart.js'
-import { hourlyEnergyPoints } from './usage_data'
+import { hourlyEnergyPoints,estimatedHourlyCost } from './usage_data'
 import { animationOptions } from './weekly_datapoints'
 
 const hourlyCanvas = document.getElementById('hourly-chart').getContext('2d')
 
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
-
-
-
-
 
 
 const hourlyLabels = [];
@@ -20,7 +16,7 @@ for (let hour = 0; hour < 24; hour++) {
 const data = {
     labels: hourlyLabels,
     datasets: [{
-        label: 'Hourly energy used',
+        label: `Hourly energy used $ ${estimatedHourlyCost}`,
         data: hourlyEnergyPoints,
         fill: false,
         borderColor: 'rgb(180,50,100)',

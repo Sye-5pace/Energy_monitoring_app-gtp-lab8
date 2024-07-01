@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileAlertCount = document.getElementById('mobile-alert-count')
   const mobileGoalCount = document.getElementById('mobile-goal-count')
 
-  console.log(alerts.length,goals.length)
+  
   alertCount.textContent = alerts.length
   goalCount.textContent = goals.length
   mobileAlertCount.textContent = alerts.length
