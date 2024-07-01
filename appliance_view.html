@@ -40,8 +40,8 @@
             </div>       
           </a>
         </header>
-        <main id="device-grid" class="px-4 flex gap-8  w-full">
-          <div class="bg-whisper rounded-lg w-[28.5rem] h-[24.5rem] p-2" id="device-1">
+        <main id="device-grid" class="px-4 flex gap-8  w-full flex-wrap mobile:p-2">
+          <div class="bg-whisper rounded-lg w-[28.5rem] h-[18.5rem] p-3 shadow-lg" id="device-1">
             <div class=" flex w-full justify-between">
               <div id="device-1-info" ></div>
               
@@ -55,19 +55,16 @@
               </div>
             </div>
           </div>
-          <div class="flex-col gap-2 children:w-[25rem] children:h-[15rem] hidden">
-            <div class="shadow-lg rounded-lg bg-tuatara" id="device-2">2</div>
-            <div class="shadow-lg rounded-lg bg-whisper" id="device-3">3</div>
-          </div>
-          <div class="w-[28.5rem] h-[30.5rem] bg-tuatara shadow-lg rounded-lg hidden" id="device-4">
+          
+          <div class="w-[28.5rem] h-[18.5rem] bg-whisper shadow-lg rounded-lg p-3" id="device-4">
             <div class=" flex w-full">
-              <div id="device-4-info"></div>
-              <div id="switch"  class="switch ml-[rem] w-[5.25rem] h-[12.75rem] bg-whisper rounded-r-[3.75rem] rounded-l-[3.75rem] flex justify-center items-start py-4">
+              <div id="device-4-info" class></div>
+              <div id="switch"  class="switch ml-[rem] w-[5.25rem] h-[12.75rem] bg-whisper rounded-r-[3.75rem] rounded-l-[3.75rem]  justify-center items-start py-4 hidden">
                 <div id="knob" class="rounded-full size-[4rem] bg-whitelilac cursor-pointer shadow-lg "></div>
               </div>
             </div>
             <div >
-              <canvas d="device-4-chart" ></canvas>
+              <canvas id="device-4-chart" ></canvas>
               <div class="time-selector-4 children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper">
                 <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara ">Hourly</button>
                 <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>
@@ -80,6 +77,6 @@
       </div>
       <script type="module" src="./appliance_helpers.js"></script>
       <script type="module" src="./devices/device_1Info.js"></script>
-      <!-- <script type="module" src="./devices/device_4Info.js"></script> -->
+      <script type="module" src="./devices/device_4Info.js"></script>
     </body>
 </html>

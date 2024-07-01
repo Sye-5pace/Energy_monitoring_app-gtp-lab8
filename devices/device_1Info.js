@@ -1,18 +1,17 @@
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
 import { devices } from '../energy_charts/usage_data'
 
-const { name,type,power_usage, timeline} = devices[0]
-console.log(name,type,timeline)
+const { name,type,timeline} = devices[0]
+
 const  device_1Info  = document.getElementById('device-1-info')
 
 const device_1Name = document.createElement('h3').text = name
 const device_1Type = document.createElement('p').text = type
-const device_1PowerUsed = document.createElement('p').text =` ${power_usage.power} kW power used`
+
 
 device_1Info.classList.add('flex','gap-4')
 device_1Info.append(device_1Name) 
 device_1Info.append(device_1Type) 
-device_1Info.append(device_1PowerUsed) 
 
 
 

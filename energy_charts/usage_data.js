@@ -23,14 +23,26 @@ export const data = {
       },
       "timeline": {
         "hourly": [
-          {
-            "power": 100,
-            "energy_used": 0.1
-          },
-          {
-            "power": 130,
-            "energy_used": 0.12
-          }
+          { "power": 100,"energy_used": 0.1},
+          {  "power": 130,  "energy_used": 0.12    },
+          {  "power": 120,  "energy_used": 0.11 },
+          { "power": 110, "energy_used": 0.09  },
+          { "power": 115, "energy_used": 0.10 },
+          { "power": 125, "energy_used": 0.11 },
+          { "power": 135, "energy_used": 0.12 },
+          { "power": 140, "energy_used": 0.13 },
+          { "power": 145, "energy_used": 0.14 },
+          { "power": 150, "energy_used": 0.15 },
+          { "power": 155, "energy_used": 0.16 },
+          { "power": 160, "energy_used": 0.17 },
+          { "power": 165, "energy_used": 0.18 },
+          { "power": 170, "energy_used": 0.19 },
+          { "power": 175, "energy_used": 0.20 },
+          { "power": 180, "energy_used": 0.21 },
+          { "power": 185, "energy_used": 0.22 },
+          { "power": 190, "energy_used": 0.23 },
+          { "power": 195, "energy_used": 0.24 },
+          { "power": 200, "energy_used": 0.25 }
         ],
         "daily": [
           {
@@ -158,6 +170,18 @@ export const data = {
       },
       "timeline": {
         "hourly": [
+          { "power": 125, "energy_used": 0.11 },
+          { "power": 135, "energy_used": 0.12 },
+          { "power": 140, "energy_used": 0.13 },
+          { "power": 145, "energy_used": 0.14 },
+          { "power": 150, "energy_used": 0.15 },
+          { "power": 155, "energy_used": 0.16 },
+          { "power": 160, "energy_used": 0.17 },
+          { "power": 165, "energy_used": 0.18 },
+          { "power": 170, "energy_used": 0.19 },
+          { "power": 175, "energy_used": 0.20 },
+          { "power": 180, "energy_used": 0.21 },
+          { "power": 185, "energy_used": 0.22 },
           {
             "power": 180,
             "energy_used": 0.18

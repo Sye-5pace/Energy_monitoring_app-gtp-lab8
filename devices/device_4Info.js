@@ -1,13 +1,14 @@
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
 import { devices } from '../energy_charts/usage_data'
 
-const { name,type,power_usage, timeline} = devices[3]
+const { name,type, timeline} = devices[3]
 const  device_4Info  = document.getElementById('device-4-info')
 
 const device_4Name = document.createElement('h3').text = name
 const device_4Type = document.createElement('p').text = type
 
-// const device1Chart = document.getElementById('device-1-chart')
+
+device_4Info.classList.add('flex','gap-4')
 device_4Info.append(device_4Name) 
 device_4Info.append(device_4Type) 
 
@@ -28,7 +29,7 @@ hourlyLabels.push(`${formattedHour}:00`);
 }
 
 const hourlyEnergyPoints = timeline.hourly.map( point => point.energy_used) 
-const weeklyEnergyPoints = timeline.weekly.map( point => point.energy_used) 
+const weeklyEnergyPoints = timeline.daily.map( point => point.energy_used) 
 const monthlyEnergyPoints = timeline.monthly.map( point => point.energy_used) 
 
   
@@ -111,8 +112,7 @@ options:{
 }
 }
   
-  
-  
+   
   
   
 document.addEventListener("DOMContentLoaded", function() {
