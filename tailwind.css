@@ -2,15 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-#switch{
-transition: transform  0.2s ease;
+header{
+
 }
 
-.switch-dark{
-    transform:translateY(16.5px) translateY(0);
+.animate-upshift{
+    
 }
 
-.switch-light{
-    transform:translateY(-23px) translateY();
+.animate-upshift-hourly{
+    animation: upshift .5s ease-in-out;
 }
-  
+.animate-upshift-weekly{
+    animation: upshift 1s  ease-in-out;
+}
+.animate-upshift-monthly{
+    animation: upshift 1.5s  ease-in-out;
+}
+
+#alerts-list{
+    animation: leftshift 1s ease-in-out;
+}
+
+#goals-list{
+    animation: leftshift 1.7s ease-in-out;
+}
+
+
+@keyframes upshift {
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes leftshift{
+    from{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
