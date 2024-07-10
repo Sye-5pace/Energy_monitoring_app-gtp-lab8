@@ -70,7 +70,7 @@ const config = {
       animation: {
         easing: 'easeInOutExpo',
         duration: 1500,
-        delay: 500,
+        delay: 1000,
         tension: {
             duration: 1000,
             easing: 'linear',

@@ -7,7 +7,7 @@ header{
 }
 
 .animate-upshift{
-    
+    animation: upshift .7s ease-in-out;
 }
 
 .animate-upshift-hourly{

@@ -8,10 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="tailwind.css">
     <title>Energy Monitor</title>
   </head>
   <body class="w-full min-h-screen box-border p-0 m-0 bg-whitelilac flex justify-center items-center mobile:items-start">
-    <div class="w-full flex justify-center items-center  flex-col mobile:gap-[4.5rem] mobile:pt-[1.75rem]">
+    <div class="w-full flex justify-center items-center  flex-col mobile:gap-[4.5rem] mobile:pt-[1.75rem] animate-upshift">
       <!-- Mobile visibility -->
       <section class="w-full laptop:hidden tablet:hidden mobile:flex mobile:justify-between mobile:items-center mobile:px-2" >
         <div class= "flex gap-2" >
@@ -84,7 +85,7 @@
               <div class="size-3 border-whitelilac bg-tuatara rounded-full text-[#fff] flex items-center justify-center absolute left-[3.625rem] top-[0.025rem] shadow-2xl text-[0.5rem] font-semibold "  id="goal-count"></div>
             </div>
           </div>
-          <a class="size-[1.85rem] rounded-full bg-honeysuckle flex justify-center items-center cursor-pointer mobile:ml-[19.25rem] "  href="./dashboard.html">
+          <a title="dashboard" class="size-[1.85rem] rounded-full bg-honeysuckle flex justify-center items-center cursor-pointer mobile:ml-[19.25rem] "  href="./dashboard.html">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 stroke-tuatara">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
             </svg>
@@ -107,8 +108,5 @@
     <script type="module" src="./main.js"></script>
     <script type="module" src="./energy_charts/widget_datapoints.js"></script>
     <script type="module" src="./energy_charts/usage_data.js"></script>
-    <!-- <script type="module" src="./energy_charts/hourly_datapoints.js"></script> -->
-    <!-- <script type="module" src="./energy_charts/monthly_datapoints.js"></script> -->
-    <!-- <script type="module" src="./energy_charts/weekly_datapoints.js"></script> -->
   </body>
 </html>
