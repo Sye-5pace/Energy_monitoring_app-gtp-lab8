@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
         <link href="./output.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="tailwind.css">
         
         <title>Appliances View</title>
     </head>
@@ -22,9 +23,7 @@
         <header class="p-4 w-full flex border-b-[0.125rem] border-whisper shadow-md justify-between">
           <h1 class="text-[2rem] font-bold font-concert mobile:text-[1rem]">
             Appliances
-          </h1>
-          
-          
+          </h1>          
           <a href="./dashboard.html"  class="flex gap-2 items-center">
             <h2 class="font-medium font-glitch text-lg text-[1rem]">DASHBOARD</h2>     
             <div class="size-[1.85rem] rounded-full bg-[#1b1b1a] flex items-center justify-center children:w-[1rem] children:h-[2rem] " >
@@ -44,10 +43,12 @@
           <div class="bg-whisper rounded-lg w-[28.5rem] h-[18.5rem] p-3 shadow-lg" id="device-1">
             <div class=" flex w-full justify-between">
               <div id="device-1-info" ></div>
-              
+              <div id="switch" class="w-16 h-8 flex items-center bg-toggle-bg-off rounded-full p-1 cursor-pointer" onclick="toggleSwitch()">
+                <div id="toggle-circle" class="w-6 h-6 bg-toggle-circle-off rounded-full shadow-md transform transition-transform duration-300 ease-in-out"></div>
             </div>
-            <div >
-              <canvas id="device-1-chart" ></canvas>
+            </div>
+            <div>
+              <canvas id="device-1-chart"></canvas>
               <div class="time-selector-1 children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper">
                 <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara ">Hourly</button>
                 <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>

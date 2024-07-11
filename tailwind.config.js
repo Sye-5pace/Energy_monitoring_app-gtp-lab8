@@ -18,7 +18,6 @@ export default {
       'tuatara':'#1b1b1a',
       'honeysuckle':'#ECFB7A',
       'whisper':'#F5F6FA',
-      // 'snuff':'#E0E1F0'
     },
     extend: {
       animation: {

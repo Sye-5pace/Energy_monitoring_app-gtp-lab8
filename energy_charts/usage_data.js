@@ -217,7 +217,7 @@ export const data = {
   "totals": {
     "current": {
       "power": 670,
-      "energy_used": 0.9,
+      "energy_used": 0.9 ,
       "cost": 0.12
     },
     "timeline": {
@@ -251,22 +251,6 @@ export const data = {
           "energy_used": 0.60
         },
         {
-          "power": 480,
-          "energy_used": 0.48
-        },
-        {
-          "power": 520,
-          "energy_used": 0.52
-        },
-        {
-          "power": 570,
-          "energy_used": 0.57
-        },
-        {
-          "power": 510,
-          "energy_used": 0.51
-        },
-        {
           "power": 620,
           "energy_used": 0.62
         },
@@ -274,14 +258,7 @@ export const data = {
           "power": 490,
           "energy_used": 0.49
         },
-        {
-          "power": 540,
-          "energy_used": 0.54
-        },
-        {
-          "power": 580,
-          "energy_used": 0.58
-        },
+  
         {
           "power": 500,
           "energy_used": 0.50

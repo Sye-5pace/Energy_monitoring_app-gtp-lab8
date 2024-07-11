@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-header{
-
-}
 
 .animate-upshift{
     animation: upshift .7s ease-in-out;
@@ -50,3 +47,19 @@ header{
         transform: translateX(0%);
     }
 }
+
+.toggle-bg-on {
+    background-color: #ECFB7A; /* honeysuckle */
+}
+.toggle-bg-off {
+    background-color: #1b1b1a; /* tuatara */
+}
+.toggle-circle-on {
+    background-color: #1b1b1a; /* tuatara */
+}
+.toggle-circle-off {
+    background-color: #fbfafd; /* whitelilac */
+}
+
+
+  
