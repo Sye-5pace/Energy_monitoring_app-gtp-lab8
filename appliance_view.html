@@ -40,24 +40,25 @@
           </a>
         </header>
         <main id="device-grid" class="px-4 flex gap-8  w-full flex-wrap mobile:p-2">
-          <div class="bg-whisper rounded-lg w-[28.5rem] h-[18.5rem] p-3 shadow-lg" id="device-1">
+          <div class="bg-whisper rounded-lg w-[28.5rem] p-3 shadow-lg" id="device-1">
             <div class=" flex w-full justify-between">
               <div id="device-1-info" ></div>
-              <div id="switch" class="w-16 h-8 flex items-center bg-toggle-bg-off rounded-full p-1 cursor-pointer" onclick="toggleSwitch()">
-                <div id="toggle-circle" class="w-6 h-6 bg-toggle-circle-off rounded-full shadow-md transform transition-transform duration-300 ease-in-out"></div>
-            </div>
+              <div class="flex px-1 w-12 h-6 items-center rounded-full bg-alert cursor-pointer">
+                <div class="absolute block w-4 h-4 rounded-full bg-whitelilac shadow-sm">
+                </div>
+              </div>
             </div>
             <div>
               <canvas id="device-1-chart"></canvas>
               <div class="time-selector-1 children:bg-tuatara children:text-whisper children:px-2 children:py-1 children:text-[0.875rem] mobile:children:text-[0.675rem] children:font-medium children:shadow-md children:rounded-lg children:border-whisper">
-                <button data-view="hourly" class="hover:bg-honeysuckle hover:text-tuatara ">Hourly</button>
-                <button data-view="weekly" class="hover:bg-honeysuckle hover:text-tuatara">Weekly</button>
-                <button data-view="monthly" class="hover:bg-honeysuckle hover:text-tuatara">Monthly</button>
+                <button data-view="hourly" class="hover:border-alert hover:bg-whisper hover:border hover:text-alert ">Hourly</button>
+                <button data-view="weekly" class="hover:border-alert hover:bg-whisper hover:border hover:text-alert">Weekly</button>
+                <button data-view="monthly" class="hover:border-alert hover:border hover:bg-whisper hover:text-alert">Monthly</button>
               </div>
             </div>
           </div>
           
-          <div class="w-[28.5rem] h-[18.5rem] bg-whisper shadow-lg rounded-lg p-3" id="device-4">
+          <!-- <div class="w-[28.5rem] h-[18.5rem] bg-whisper shadow-lg rounded-lg p-3" id="device-4">
             <div class=" flex w-full">
               <div id="device-4-info" class></div>
               <div id="switch"  class="switch ml-[rem] w-[5.25rem] h-[12.75rem] bg-whisper rounded-r-[3.75rem] rounded-l-[3.75rem]  justify-center items-start py-4 hidden">
@@ -72,7 +73,7 @@
                 <button data-view="monthly" class="hover:bg-honeysuckle hover:text-tuatara">Monthly</button>
               </div>
             </div>
-          </div>
+          </div> -->
          
         </main>
       </div>

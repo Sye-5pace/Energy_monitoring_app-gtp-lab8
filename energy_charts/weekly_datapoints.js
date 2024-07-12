@@ -2,19 +2,6 @@ import { Chart, LineController, LineElement, PointElement, LinearScale, Title, C
 import { weeklyEnergyPoints,estimatedWeeklyCost } from './usage_data'
 
 
-export const animationOptions = {
-    easing: 'easeInOutExpo',
-    duration: 1500,
-    delay: 500,
-    tension: {
-        duration: 1000,
-        easing: 'linear',
-        from: 1,
-        to: 0,
-        loop: true
-    }
-}
-
 
 
 const weeklyCanvas = document.getElementById('weekly-chart').getContext('2d')
@@ -46,7 +33,6 @@ const config = {
     data,
     options:{
         reponsive: true,
-        animation: animationOptions,
         plugins: {
             legend: {
                 position: 'top'

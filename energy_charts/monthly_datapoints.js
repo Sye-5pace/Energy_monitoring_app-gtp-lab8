@@ -1,6 +1,6 @@
 import { Chart, LineController,LineElement, PointElement,LinearScale,Title, CategoryScale } from 'chart.js'
 import { monthlyEnergyPoints,estimatedMonthlyCost } from './usage_data'
-import { animationOptions } from './weekly_datapoints'
+// import { animationOptions } from './weekly_datapoints'
 
 const monthlyCanvas = document.getElementById('monthly-chart').getContext('2d')
 
@@ -29,7 +29,7 @@ const config = {
     data,
     options:{
         reponsive: true,
-        animation: animationOptions,
+        // animation: animationOptions,
         plugins: {
             legend: {
                 position: 'top'

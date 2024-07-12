@@ -1,10 +1,16 @@
-function toggleSwitch() {
-    const switchElement = document.getElementById('switch');
-    const toggleCircle = document.getElementById('toggle-circle');
-    switchElement.classList.toggle('bg-toggle-bg-off');
-    switchElement.classList.toggle('bg-toggle-bg-on');
-    toggleCircle.classList.toggle('bg-toggle-circle-off');
-    toggleCircle.classList.toggle('bg-toggle-circle-on');
-    toggleCircle.classList.toggle('translate-x-0');
-    toggleCircle.classList.toggle('translate-x-full');
-}
+const switchElement = document.getElementById('switch');
+let isLightOn = false;
+
+switchElement.addEventListener('change', (event) => {
+  if (event.target.checked) {
+    console.log('Switch is ON');
+    isLightOn = true;
+    document.querySelector('.relative.inline-block.w-10.h-6.rounded-full').classList.remove('bg-tuatara');
+    document.querySelector('.relative.inline-block.w-10.h-6.rounded-full').classList.add('bg-honeysuckle');
+  } else {
+    console.log('Switch is OFF');
+    isLightOn = false;
+    document.querySelector('.relative.inline-block.w-10.h-6.rounded-full').classList.remove('bg-honeysuckle');
+    document.querySelector('.relative.inline-block.w-10.h-6.rounded-full').classList.add('bg-tuatara');
+  }
+});

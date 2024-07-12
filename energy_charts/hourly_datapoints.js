@@ -1,6 +1,6 @@
 import { Chart, LineController,LineElement, PointElement,LinearScale,Title, CategoryScale } from 'chart.js'
 import { hourlyEnergyPoints,estimatedHourlyCost } from './usage_data'
-import { animationOptions } from './weekly_datapoints'
+// import { animationOptions } from './weekly_datapoints'
 
 const hourlyCanvas = document.getElementById('hourly-chart').getContext('2d')
 
@@ -33,7 +33,7 @@ const config = {
     data,
     options:{
         reponsive: true,
-        animation: animationOptions,
+        // animation: animationOptions,
         plugins: {
             legend: {
                 position: 'top'

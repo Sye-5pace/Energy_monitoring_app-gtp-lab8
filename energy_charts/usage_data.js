@@ -68,53 +68,16 @@ export const data = {
     },
     {
       "id": "device_2",
-      "name": "Kitchen",
-      "type": "Smart Appliance",
-      "voltage": 120,
-      "power_usage": 2.5,
-      "power_factor": 0.95,
-      "power_usage": {
-        "power": 300,
-        "energy_used": 0.4,
-        "cost": 0.05
-      },
-      "timeline": {
-        "hourly": [
-          {
-            "power": 250,
-            "energy_used": 0.25
-          },
-          {
-            "power": 320,
-            "energy_used": 0.32
-          }
-        ],
-        "daily": [
-          {
-         
-            "energy_used": 6
-          },
-          {
-         
-            "energy_used": 7.5
-          }
-        ],
-        "monthly": [
-          {
-            "energy_used": 120
-          },
-          {
-            "energy_used": 110
-          }
-        ]
-      },
-      "min_power": 200,
-      "max_power": 400
+      "name": "Thermostat",
+      "type": "Thermostat",
+      "battery_level": 18,
+      "battery_needed": "2 x AA"
     },
     {
       "id": "device_3",
-      "name": "Bedroom",
-      "type": "Smart Bulb",
+      "name": "Garage Door Sensor",
+      "type": "Door/Window Sensor",
+      "status": "offline",
       "voltage": 120,
       "current": 0.5,
       "power_factor": 0.85,
@@ -158,8 +121,8 @@ export const data = {
     },  
     {
       "id": "device_4",
-      "name": "Home Office",
-      "type": "Smart Laptop",
+      "name": "Kitchen Appliance",
+      "type": "Smart Kettle",
       "voltage": 120,
       "current": 1.8,
       "power_factor": 0.9,
